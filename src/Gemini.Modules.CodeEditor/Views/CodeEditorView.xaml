@@ -7,6 +7,9 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-		<local:CodeEditor x:Name="CodeEditor" />
+        <local:CodeEditor x:Name="CodeEditor" 
+                          Document="{Binding Document, UpdateSourceTrigger=PropertyChanged}" 
+                          SyntaxHighlighting="{Binding HighlightingDefinition, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                          IsModified="{Binding Path=IsDirty, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
     </Grid>
 </UserControl>

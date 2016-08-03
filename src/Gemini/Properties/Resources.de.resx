@@ -264,4 +264,7 @@
   <data name="FileRecentFilesCommandToolTip" xml:space="preserve">
     <value>Zuletzt geöffnete Dateien</value>
   </data>
+  <data name="SaveChangesBeforeClosingMessage" xml:space="preserve">
+    <value>Speichern Sie die Änderungen an der {0} "{1}" vor dem Schließen?</value>
+  </data>
 </root>

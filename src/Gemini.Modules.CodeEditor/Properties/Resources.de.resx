@@ -120,4 +120,19 @@
   <data name="EditorProviderFileSuffix" xml:space="preserve">
     <value> Datei</value>
   </data>
+  <data name="DeleteText" xml:space="preserve">
+    <value>Löschen Text</value>
+  </data>
+  <data name="InsertNewLine" xml:space="preserve">
+    <value>Einfügen Neue Zeile</value>
+  </data>
+  <data name="InsertText" xml:space="preserve">
+    <value>Einfügen Text</value>
+  </data>
+  <data name="CutSelection" xml:space="preserve">
+    <value>Ausschneiden Auswahl</value>
+  </data>
+  <data name="Paste" xml:space="preserve">
+    <value>Paste</value>
+  </data>
 </root>

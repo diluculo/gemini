@@ -17,10 +17,11 @@ namespace Gemini.Demo.Modules.Shell.ViewModels
             ViewLocator.AddNamespaceMapping(typeof(ShellViewModel).Namespace, typeof(ShellView).Namespace);
         }
 
-        public override void CanClose(Action<bool> callback)
-        {
-            Coroutine.BeginExecute(CanClose().GetEnumerator(), null, (s, e) => callback(!e.WasCancelled));
-        }
+        // TODO: Now CanClose of ShellViewModel blocks CanClose of each document.
+        //public override void CanClose(Action<bool> callback)
+        //{
+        //    Coroutine.BeginExecute(CanClose().GetEnumerator(), null, (s, e) => callback(!e.WasCancelled));
+        //}
 
         private IEnumerable<IResult> CanClose()
         {

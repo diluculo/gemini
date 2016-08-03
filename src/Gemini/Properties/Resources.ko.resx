@@ -267,4 +267,7 @@
   <data name="ViewHistoryCommandToolTip" xml:space="preserve">
     <value>기록</value>
   </data>
+  <data name="SaveChangesBeforeClosingMessage" xml:space="preserve">
+    <value>변경 내용을 "{1}" {0}에 저장하시겠습니까?</value>
+  </data>
 </root>

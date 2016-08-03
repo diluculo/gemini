@@ -160,6 +160,15 @@ namespace Gemini.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to New.
+        /// </summary>
+        internal static string FileNewCommandToolTip {
+            get {
+                return ResourceManager.GetString("FileNewCommandToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Untitled {0}.
         /// </summary>
         internal static string FileNewUntitled {
@@ -336,6 +345,15 @@ namespace Gemini.Properties {
         internal static string MainWindowDefaultTitle {
             get {
                 return ResourceManager.GetString("MainWindowDefaultTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save changes to the {0} &quot;{1}&quot; before closing?.
+        /// </summary>
+        internal static string SaveChangesBeforeClosingMessage {
+            get {
+                return ResourceManager.GetString("SaveChangesBeforeClosingMessage", resourceCulture);
             }
         }
         

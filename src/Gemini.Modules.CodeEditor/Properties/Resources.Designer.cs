@@ -61,11 +61,56 @@ namespace Gemini.Modules.CodeEditor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cut Selection.
+        /// </summary>
+        internal static string CutSelection {
+            get {
+                return ResourceManager.GetString("CutSelection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete Text.
+        /// </summary>
+        internal static string DeleteText {
+            get {
+                return ResourceManager.GetString("DeleteText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to  File.
         /// </summary>
         internal static string EditorProviderFileSuffix {
             get {
                 return ResourceManager.GetString("EditorProviderFileSuffix", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Insert New Line.
+        /// </summary>
+        internal static string InsertNewLine {
+            get {
+                return ResourceManager.GetString("InsertNewLine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Insert Text.
+        /// </summary>
+        internal static string InsertText {
+            get {
+                return ResourceManager.GetString("InsertText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Paste.
+        /// </summary>
+        internal static string Paste {
+            get {
+                return ResourceManager.GetString("Paste", resourceCulture);
             }
         }
     }

@@ -118,6 +118,21 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="EditorProviderFileSuffix" xml:space="preserve">
-    <value>파일</value>
+    <value> 파일</value>
+  </data>
+  <data name="DeleteText" xml:space="preserve">
+    <value>텍스트 삭제</value>
+  </data>
+  <data name="InsertNewLine" xml:space="preserve">
+    <value>새로운 줄 삽입</value>
+  </data>
+  <data name="InsertText" xml:space="preserve">
+    <value>텍스트 삽입</value>
+  </data>
+  <data name="CutSelection" xml:space="preserve">
+    <value>잘라내기</value>
+  </data>
+  <data name="Paste" xml:space="preserve">
+    <value>붙여넣기</value>
   </data>
 </root>

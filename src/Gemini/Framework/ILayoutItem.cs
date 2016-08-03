@@ -14,6 +14,6 @@ namespace Gemini.Framework
         bool IsSelected { get; set; }
         bool ShouldReopenOnStart { get; }
         void LoadState(BinaryReader reader);
-        void SaveState(BinaryWriter writer);
+        void SaveState(BinaryWriter writer);        
     }
 }

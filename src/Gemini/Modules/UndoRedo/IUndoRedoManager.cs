@@ -11,6 +11,8 @@ namespace Gemini.Modules.UndoRedo
         event EventHandler BatchBegin;
         event EventHandler BatchEnd;
 
+        bool AcceptChanges { get; }
+
         void ExecuteAction(IUndoableAction action);
 
         void Undo(int actionCount);

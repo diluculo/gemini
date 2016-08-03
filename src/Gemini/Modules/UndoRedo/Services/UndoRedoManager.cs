@@ -11,6 +11,10 @@ namespace Gemini.Modules.UndoRedo.Services
         public event EventHandler BatchBegin;
         public event EventHandler BatchEnd;
 
+        // false while an undo/redo action is running
+        bool _acceptChanges = true;
+        public bool AcceptChanges { get { return _acceptChanges; } }
+
         public IObservableCollection<IUndoableAction> UndoStack
         {
             get { return _undoStack; }
@@ -29,9 +33,13 @@ namespace Gemini.Modules.UndoRedo.Services
 
         public void ExecuteAction(IUndoableAction action)
         {
+            _acceptChanges = false;
+
             action.Execute();
             Push(_undoStack, action);
             _redoStack.Clear();
+
+            _acceptChanges = true;
         }
 
         public void Undo(int actionCount)
@@ -121,6 +129,8 @@ namespace Gemini.Modules.UndoRedo.Services
 
         private void OnBegin()
         {
+            _acceptChanges = false;
+
             var handler = BatchBegin;
             if (handler != null)
                 handler(this, EventArgs.Empty);
@@ -131,6 +141,8 @@ namespace Gemini.Modules.UndoRedo.Services
             var handler = BatchEnd;
             if (handler != null)
                 handler(this, EventArgs.Empty);
+
+            _acceptChanges = true;
         }
 
         private static IUndoableAction Peek(BindableCollection<IUndoableAction> stack)

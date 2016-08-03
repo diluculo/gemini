@@ -264,4 +264,10 @@
   <data name="FileSaveAllCommandToolTip" xml:space="preserve">
     <value>Save All</value>
   </data>
+  <data name="SaveChangesBeforeClosingMessage" xml:space="preserve">
+    <value>Save changes to the {0} "{1}" before closing?</value>
+  </data>
+  <data name="FileNewCommandToolTip" xml:space="preserve">
+    <value>New</value>
+  </data>
 </root>
