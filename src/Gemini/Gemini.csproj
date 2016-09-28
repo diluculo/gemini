@@ -149,9 +149,12 @@
     <Compile Include="Framework\Services\EditorFileType.cs" />
     <Compile Include="Framework\Services\IMainWindow.cs" />
     <Compile Include="Framework\Services\SettingsPropertyChangedEventManager.cs" />
+    <Compile Include="Framework\ShaderEffects\Converters\BindingProxy.cs" />
+    <Compile Include="Framework\ShaderEffects\Converters\SolidColorBrushToColorConverter.cs" />
     <Compile Include="Framework\ShaderEffects\GrayscaleEffect.cs" />
     <Compile Include="Framework\ShaderEffects\ShaderEffectBase.cs" />
     <Compile Include="Framework\ShaderEffects\ShaderEffectUtility.cs" />
+    <Compile Include="Framework\ShaderEffects\ThemedImageEffect.cs" />
     <Compile Include="Framework\Themes\ITheme.cs" />
     <Compile Include="Framework\Themes\IThemeManager.cs" />
     <Compile Include="Framework\Themes\BlueTheme.cs" />
@@ -484,6 +487,7 @@
   <ItemGroup>
     <None Include="app.config" />
     <Resource Include="Framework\ShaderEffects\GrayscaleEffect.ps" />
+    <Resource Include="Framework\ShaderEffects\ThemedImageEffect.ps" />
     <None Include="Gemini.nuspec" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -522,6 +526,10 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Icons\FullScreen.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Framework\ShaderEffects\Scripts\ThemedImage.fx" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Icons\NewFile.png" />
