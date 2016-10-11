@@ -30,9 +30,13 @@ namespace Gemini.Modules.Shell.Commands
             dialog.Filter = "All Supported Files|" + string.Join(";", _editorProviders
                 .SelectMany(x => x.FileTypes).Select(x => "*" + x.FileExtension));
 
-            dialog.Filter += "|" + string.Join("|", _editorProviders
-                .SelectMany(x => x.FileTypes)
-                .Select(x => x.Name + "|*" + x.FileExtension));
+            dialog.Filter += "|" + string.Join("|", _editorProviders.SelectMany(x => x.FileTypes)
+                .GroupBy(x => x.Label)
+                .Select(g => new { label = g.Key,
+                                   ext1 = string.Join(",", g.Select(o => "*" + o.FileExtension)),
+                                   ext2 = string.Join(";", g.Select(o => "*" + o.FileExtension)),
+                                 })
+                .Select(y => y.label + " (" + y.ext1 + ")|" + y.ext2));
 
             if (dialog.ShowDialog() == true)
                 _shell.OpenDocument(await GetEditor(dialog.FileName));

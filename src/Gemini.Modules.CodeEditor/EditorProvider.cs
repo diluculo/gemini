@@ -29,6 +29,7 @@ namespace Gemini.Modules.CodeEditor
 	            return _languageDefinitionManager.LanguageDefinitions
 	                .Select(languageDefinition => new EditorFileType
 	                {
+                        Label = Resources.EditorProviderCodeFiles,
 	                    Name = languageDefinition.Name + Resources.EditorProviderFileSuffix,
 	                    FileExtension = languageDefinition.FileExtensions.First()
 	                });

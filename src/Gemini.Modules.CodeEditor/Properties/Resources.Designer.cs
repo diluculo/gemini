@@ -61,6 +61,15 @@ namespace Gemini.Modules.CodeEditor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Code Files.
+        /// </summary>
+        internal static string EditorProviderCodeFiles {
+            get {
+                return ResourceManager.GetString("EditorProviderCodeFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to  File.
         /// </summary>
         internal static string EditorProviderFileSuffix {

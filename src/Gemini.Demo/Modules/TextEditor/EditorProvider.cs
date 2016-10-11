@@ -20,7 +20,7 @@ namespace Gemini.Demo.Modules.TextEditor
 
         public IEnumerable<EditorFileType> FileTypes
         {
-            get { yield return new EditorFileType(Resources.EditorProviderTextFile, ".txt"); }
+            get { yield return new EditorFileType(Resources.EditorProviderTextFiles, Resources.EditorProviderTextFile, ".txt"); }
         }
 
 		public bool Handles(string path)
