@@ -282,4 +282,13 @@
   <data name="ViewFullScreenCommandToolTip" xml:space="preserve">
     <value>Vollbild</value>
   </data>
+  <data name="FileNewFileCommandText" xml:space="preserve">
+    <value>Datei</value>
+  </data>
+  <data name="FileOpenFileCommandText" xml:space="preserve">
+    <value>Datei...</value>
+  </data>
+  <data name="FileOpenFileCommandToolTip" xml:space="preserve">
+    <value>Öffnen Datei</value>
+  </data>
 </root>

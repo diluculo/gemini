@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.Composition;
+using System.ComponentModel.Composition;
 using Gemini.Framework.Menus;
 using Gemini.Modules.Shell.Commands;
 using Gemini.Properties;
@@ -12,24 +12,32 @@ namespace Gemini.Modules.Shell
             MainMenu.MenuDefinitions.FileNewOpenMenuGroup, 0, Resources.FileNewCommandText);
 
         [Export]
-        public static MenuItemGroupDefinition FileNewCascadeGroup = new MenuItemGroupDefinition(
+        public static MenuItemGroupDefinition FileNewFileMenuGroup = new MenuItemGroupDefinition(
             FileNewMenuItem, 0);
 
         [Export]
-        public static MenuItemDefinition FileNewFilesMenuItem = new TextMenuItemDefinition(
-            FileNewCascadeGroup, 10, Resources.FileNewFilesCommandText, new System.Uri("pack://application:,,,/Gemini;component/Resources/Icons/NewFile.png"));
+        public static MenuItemDefinition FileNewFileMenuItem = new TextMenuItemDefinition(
+            FileNewFileMenuGroup, 100, Resources.FileNewFileCommandText, new System.Uri("pack://application:,,,/Gemini;component/Resources/Icons/NewFile.png"));
 
         [Export]
         public static MenuItemGroupDefinition FileNewFilesCascadeGroup = new MenuItemGroupDefinition(
-            FileNewFilesMenuItem, 0);
+            FileNewFileMenuItem, 0);
 
         [Export]
         public static MenuItemDefinition FileNewMenuItemList = new CommandMenuItemDefinition<NewFileCommandListDefinition>(
             FileNewFilesCascadeGroup, 0);
 
         [Export]
-        public static MenuItemDefinition FileOpenMenuItem = new CommandMenuItemDefinition<OpenFileCommandDefinition>(
-            MainMenu.MenuDefinitions.FileNewOpenMenuGroup, 1);
+        public static MenuItemDefinition FileOpenMenuItem = new TextMenuItemDefinition(
+            MainMenu.MenuDefinitions.FileNewOpenMenuGroup, 1, Resources.FileOpenCommandText);
+
+        [Export]
+        public static MenuItemGroupDefinition FileOpenFileMenuGroup = new MenuItemGroupDefinition(
+            FileOpenMenuItem, 100);
+
+        [Export]
+        public static MenuItemDefinition FileOpenFileMenuItem = new CommandMenuItemDefinition<OpenFileCommandDefinition>(
+            FileOpenFileMenuGroup, 0);
 
         [Export]
         public static MenuItemDefinition FileCloseMenuItem = new CommandMenuItemDefinition<CloseFileCommandDefinition>(

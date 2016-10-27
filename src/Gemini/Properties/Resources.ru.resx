@@ -285,4 +285,13 @@
   <data name="FileNewCommandToolTip" xml:space="preserve">
     <value>Новый</value>
   </data>
+  <data name="FileNewFileCommandText" xml:space="preserve">
+    <value>Файл</value>
+  </data>
+  <data name="FileOpenFileCommandText" xml:space="preserve">
+    <value>Файл...</value>
+  </data>
+  <data name="FileOpenFileCommandToolTip" xml:space="preserve">
+    <value>Открыть Файл</value>
+  </data>
 </root>

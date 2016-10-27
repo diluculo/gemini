@@ -19,7 +19,7 @@ namespace Gemini.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -178,7 +178,7 @@ namespace Gemini.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to _New.
+        ///   Looks up a localized string similar to New.
         /// </summary>
         internal static string FileNewCommandText {
             get {
@@ -196,11 +196,11 @@ namespace Gemini.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Files.
+        ///   Looks up a localized string similar to File.
         /// </summary>
-        internal static string FileNewFilesCommandText {
+        internal static string FileNewFileCommandText {
             get {
-                return ResourceManager.GetString("FileNewFilesCommandText", resourceCulture);
+                return ResourceManager.GetString("FileNewFileCommandText", resourceCulture);
             }
         }
         
@@ -214,7 +214,7 @@ namespace Gemini.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to _Open.
+        ///   Looks up a localized string similar to Open.
         /// </summary>
         internal static string FileOpenCommandText {
             get {
@@ -228,6 +228,24 @@ namespace Gemini.Properties {
         internal static string FileOpenCommandToolTip {
             get {
                 return ResourceManager.GetString("FileOpenCommandToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File....
+        /// </summary>
+        internal static string FileOpenFileCommandText {
+            get {
+                return ResourceManager.GetString("FileOpenFileCommandText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open File.
+        /// </summary>
+        internal static string FileOpenFileCommandToolTip {
+            get {
+                return ResourceManager.GetString("FileOpenFileCommandToolTip", resourceCulture);
             }
         }
         
