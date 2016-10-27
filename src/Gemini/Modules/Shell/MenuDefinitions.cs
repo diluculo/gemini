@@ -16,8 +16,16 @@ namespace Gemini.Modules.Shell
             FileNewMenuItem, 0);
 
         [Export]
+        public static MenuItemDefinition FileNewFilesMenuItem = new TextMenuItemDefinition(
+            FileNewCascadeGroup, 10, Resources.FileNewFilesCommandText, new System.Uri("pack://application:,,,/Gemini;component/Resources/Icons/NewFile.png"));
+
+        [Export]
+        public static MenuItemGroupDefinition FileNewFilesCascadeGroup = new MenuItemGroupDefinition(
+            FileNewFilesMenuItem, 0);
+
+        [Export]
         public static MenuItemDefinition FileNewMenuItemList = new CommandMenuItemDefinition<NewFileCommandListDefinition>(
-            FileNewCascadeGroup, 0);
+            FileNewFilesCascadeGroup, 0);
 
         [Export]
         public static MenuItemDefinition FileOpenMenuItem = new CommandMenuItemDefinition<OpenFileCommandDefinition>(
