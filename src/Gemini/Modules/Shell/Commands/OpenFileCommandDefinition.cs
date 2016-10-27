@@ -18,12 +18,12 @@ namespace Gemini.Modules.Shell.Commands
 
         public override string Text
         {
-            get { return Resources.FileOpenCommandText; }
+            get { return Resources.FileOpenFileCommandText; }
         }
 
         public override string ToolTip
         {
-            get { return Resources.FileOpenCommandToolTip; }
+            get { return Resources.FileOpenFileCommandToolTip; }
         }
 
         public override Uri IconSource

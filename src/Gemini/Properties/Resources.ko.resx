@@ -154,7 +154,7 @@
     <value>문서 {0}</value>
   </data>
   <data name="FileOpenCommandText" xml:space="preserve">
-    <value>열기(_O)</value>
+    <value>열기</value>
   </data>
   <data name="FileOpenCommandToolTip" xml:space="preserve">
     <value>열기</value>
@@ -281,5 +281,14 @@
   </data>
   <data name="ViewFullScreenCommandToolTip" xml:space="preserve">
     <value>전체화면</value>
+  </data>
+  <data name="FileNewFileCommandText" xml:space="preserve">
+    <value>파일</value>
+  </data>
+  <data name="FileOpenFileCommandText" xml:space="preserve">
+    <value>파일...</value>
+  </data>
+  <data name="FileOpenFileCommandToolTip" xml:space="preserve">
+    <value>파일 열기</value>
   </data>
 </root>

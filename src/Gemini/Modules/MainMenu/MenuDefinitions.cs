@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.Composition;
+using System.ComponentModel.Composition;
 using Gemini.Framework.Menus;
 using Gemini.Properties;
 
@@ -37,7 +37,10 @@ namespace Gemini.Modules.MainMenu
         public static MenuItemGroupDefinition ViewToolsMenuGroup = new MenuItemGroupDefinition(ViewMenu, 0);
 
         [Export]
-        public static MenuItemGroupDefinition ViewPropertiesMenuGroup = new MenuItemGroupDefinition(ViewMenu, 100);
+        public static MenuItemGroupDefinition ViewOtherWindowsMenuGroup = new MenuItemGroupDefinition(ViewMenu, 100);
+
+        [Export]
+        public static MenuItemGroupDefinition ViewPropertiesMenuGroup = new MenuItemGroupDefinition(ViewMenu, 200);
 
         [Export]
         public static MenuDefinition ToolsMenu = new MenuDefinition(MainMenuBar, 10, Resources.ToolsMenuText);
