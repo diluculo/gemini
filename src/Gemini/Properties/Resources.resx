@@ -285,4 +285,7 @@
   <data name="ViewFullScreenCommandToolTip" xml:space="preserve">
     <value>Full Screen</value>
   </data>
+  <data name="FileNewFilesCommandText" xml:space="preserve">
+    <value>Files</value>
+  </data>
 </root>
