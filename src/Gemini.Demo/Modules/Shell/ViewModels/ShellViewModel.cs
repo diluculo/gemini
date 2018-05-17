@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.Composition;
-using System.Windows;
 using Caliburn.Micro;
 using Gemini.Demo.Properties;
 using Gemini.Framework.Services;
 using Gemini.Modules.Shell.Views;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.Composition;
+using System.Windows;
 
 namespace Gemini.Demo.Modules.Shell.ViewModels
 {
@@ -35,9 +35,13 @@ namespace Gemini.Demo.Modules.Shell.ViewModels
             {
                 var result = System.Windows.MessageBoxResult.Yes;
 
+                List<string> files = new List<string>() { "aaa", "bbb", "ccc" };
+                result = Gemini.Modules.DialogManager.SaveFilesPrompt.Show(files);
+
                 if (Settings.Default.ConfirmExit)
                 {
-                    result = MessageBox.Show("Are you sure you want to exit?", "Confirm", MessageBoxButton.YesNo);
+                    result = Gemini.Modules.DialogManager.MessageBox.Show("Are you sure you want to exit?", "Confirm", MessageBoxButton.YesNo);
+                    //result = Gemini.Modules.DialogManager.MessageBox.Show("Are you sure you want to exit?", "Confirm", MessageBoxButton.YesNoCancel, MessageBoxImage.Error, System.Windows.MessageBoxResult.Cancel);
                 }
 
                 Completed(this, new ResultCompletionEventArgs { WasCancelled = (result != System.Windows.MessageBoxResult.Yes) });

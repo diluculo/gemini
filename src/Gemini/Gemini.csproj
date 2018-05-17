@@ -147,6 +147,7 @@
     <Compile Include="Framework\Results\ShowDialogResult.cs" />
     <Compile Include="Framework\Services\EditorFileType.cs" />
     <Compile Include="Framework\Services\IMainWindow.cs" />
+    <Compile Include="Modules\DialogManager\MessageBox.cs" />
     <Compile Include="Framework\Services\SettingsPropertyChangedEventManager.cs" />
     <Compile Include="Framework\ShaderEffects\GrayscaleEffect.cs" />
     <Compile Include="Framework\ShaderEffects\ShaderEffectBase.cs" />
@@ -167,6 +168,20 @@
     <Compile Include="Framework\Win32\NativeMethods.cs" />
     <Compile Include="Framework\WindowBase.cs" />
     <Compile Include="Framework\Controls\DynamicStyle.cs" />
+    <Compile Include="Modules\DialogManager\DialogManager.cs" />
+    <Compile Include="Modules\DialogManager\IDialogManager.cs" />
+    <Compile Include="Modules\DialogManager\SaveFilesPrompt.cs" />
+    <Compile Include="Modules\DialogManager\ViewModels\DialogTreeViewModel.cs" />
+    <Compile Include="Modules\DialogManager\ViewModels\DialogViewModel.cs" />
+    <Compile Include="Modules\DialogManager\ViewModels\IDialogViewModel.cs" />
+    <Compile Include="Modules\DialogManager\ViewModels\MessageBoXViewModel.cs" />
+    <Compile Include="Modules\DialogManager\ViewModels\SaveFilesPromptViewModel.cs" />
+    <Compile Include="Modules\DialogManager\Views\MessageBoxView.xaml.cs">
+      <DependentUpon>MessageBoxView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DialogManager\Views\SaveFilesPromptView.xaml.cs">
+      <DependentUpon>SaveFilesPromptView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Modules\MainMenu\Behaviors\MenuBehavior.cs" />
     <Compile Include="Modules\MainMenu\Converters\CultureInfoNameConverter.cs" />
     <Compile Include="Modules\MainMenu\IMenuBuilder.cs" />
@@ -337,6 +352,14 @@
     <Compile Include="Framework\Themes\LightTheme.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Modules\DialogManager\Views\MessageBoxView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\DialogManager\Views\SaveFilesPromptView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Modules\MainMenu\Resources\Styles.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -467,6 +490,13 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Icons\FullScreen.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resources\Icons\StatusCriticalError_48x.png" />
+    <Resource Include="Resources\Icons\StatusHelp_48x.png" />
+    <Resource Include="Resources\Icons\StatusInformation_48x.png" />
+    <Resource Include="Resources\Icons\StatusWarning_48x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

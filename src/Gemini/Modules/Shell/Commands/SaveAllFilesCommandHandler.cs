@@ -1,4 +1,4 @@
-﻿using Gemini.Framework;
+using Gemini.Framework;
 using Gemini.Framework.Commands;
 using Gemini.Framework.Services;
 using System;
