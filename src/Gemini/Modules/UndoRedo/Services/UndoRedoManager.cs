@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Caliburn.Micro;
 
 namespace Gemini.Modules.UndoRedo.Services
@@ -20,6 +20,10 @@ namespace Gemini.Modules.UndoRedo.Services
         {
             get { return _redoStack; }
         }
+
+        // false while an undo/redo action is running
+        bool _acceptChanges = true;
+        public bool AcceptChanges { get { return _acceptChanges; } }
 
         private int? _undoCountLimit = null;
 

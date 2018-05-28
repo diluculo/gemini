@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Caliburn.Micro;
 
 namespace Gemini.Modules.UndoRedo
@@ -10,6 +10,8 @@ namespace Gemini.Modules.UndoRedo
 
         event EventHandler BatchBegin;
         event EventHandler BatchEnd;
+
+        bool AcceptChanges { get; }
 
         int? UndoCountLimit { get; set; }
 
