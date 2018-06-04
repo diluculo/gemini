@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using Gemini.Framework;
@@ -67,6 +67,10 @@ namespace Gemini.Modules.Shell.Views
             try
             {
                 layoutSerializer.Deserialize(stream);
+                // Avalondock v3.2 and v3.3 has a bug - Deserialization creates a new RootPanel but its orientation is always horizontal.
+                // See https://github.com/tgjones/gemini/issues/281, https://github.com/xceedsoftware/wpftoolkit/issues/1118
+                // Temporal fix:
+                manager.Layout.RootPanel.Orientation = System.Windows.Controls.Orientation.Vertical;
             }
             catch
             {
