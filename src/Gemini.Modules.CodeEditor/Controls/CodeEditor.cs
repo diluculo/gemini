@@ -1,4 +1,5 @@
-﻿using System.Windows.Media;
+using System.Windows;
+using System.Windows.Media;
 using ICSharpCode.AvalonEdit;
 
 namespace Gemini.Modules.CodeEditor.Controls
@@ -12,8 +13,11 @@ namespace Gemini.Modules.CodeEditor.Controls
             ShowLineNumbers = true;
             Options = new TextEditorOptions
             {
-                ConvertTabsToSpaces = true
+                ConvertTabsToSpaces = true,
+                HighlightCurrentLine = true
             };
+
+            SetResourceReference(StyleProperty, typeof(TextEditor));
         }
     }
 }
