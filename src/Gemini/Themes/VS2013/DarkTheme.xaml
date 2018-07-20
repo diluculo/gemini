@@ -179,7 +179,7 @@
     <SolidColorBrush x:Key="Editor.NonPrintableCharacter" Color="#2FFFFFFF" />
     <SolidColorBrush x:Key="Editor.LinkTextForeground" Color="#FFE5C365" />
     <SolidColorBrush x:Key="Editor.LinkTextBackground" Color="Transparent" />
-    <Color x:Key="Editor.SelectionBrushColor">#335C87</Color>
+    <SolidColorBrush x:Key="Editor.SelectionBrush" Color="#335C87" Opacity="0.7"/>
     <SolidColorBrush x:Key="Editor.SelectionBorder" Color="#50ffffff" />
     <SolidColorBrush x:Key="Editor.SelectionForeground" Color="#FFF1F1F1" />
     
