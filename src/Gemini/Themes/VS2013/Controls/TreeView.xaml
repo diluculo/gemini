@@ -6,7 +6,6 @@
         <Setter Property="BorderBrush" Value="{DynamicResource TreeView.Static.Border}"/>
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="Padding" Value="1"/>
-        <Setter Property="Margin" Value="2"/>
         <Setter Property="Foreground" Value="{DynamicResource TreeView.Static.Text}"/>
         <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
         <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
@@ -105,7 +104,7 @@
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
         <Setter Property="VerticalContentAlignment" Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
-        <Setter Property="Padding" Value="1,0,0,0"/>
+        <Setter Property="Padding" Value="1,2,0,2"/>
         <Setter Property="Foreground" Value="{DynamicResource TreeViewItem.Static.Text}"/>
         <Setter Property="FocusVisualStyle" Value="{StaticResource TreeViewItemFocusVisual}"/>
         <Setter Property="IsExpanded" Value="True"/>
