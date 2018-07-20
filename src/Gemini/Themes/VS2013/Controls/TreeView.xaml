@@ -6,6 +6,7 @@
         <Setter Property="BorderBrush" Value="{DynamicResource TreeView.Static.Border}"/>
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="Padding" Value="1"/>
+        <Setter Property="Margin" Value="2"/>
         <Setter Property="Foreground" Value="{DynamicResource TreeView.Static.Text}"/>
         <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
         <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
