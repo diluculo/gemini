@@ -162,7 +162,7 @@
     <SolidColorBrush x:Key="OptionMark.Pressed.Glyph" Color="#F1F1F1"/>
 
     <!-- Text box -->
-    <SolidColorBrush x:Key="TextBox.Static.Background" Color="#333337"/>
+    <SolidColorBrush x:Key="TextBox.Static.Background" Color="#3F3F46"/>
     <SolidColorBrush x:Key="TextBox.Static.Border" Color="#434346"/>
     <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#0099FF"/>
     <SolidColorBrush x:Key="TextBox.Focus.Border" Color="#007ACC"/>
