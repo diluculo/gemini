@@ -290,17 +290,21 @@
                         <Trigger Property="ColorMode" Value="ColorPalette">
                             <Setter TargetName="_colorPaletteHost" Property="Visibility" Value="Visible" />
                             <Setter TargetName="_colorCanvasHost" Property="Visibility" Value="Collapsed" />
+                            <!--
                             <Setter TargetName="PART_ColorModeButton"
                              Property="Content"
                              Value="{Binding AdvancedButtonHeader, RelativeSource={RelativeSource TemplatedParent}}" />
+                            -->
                         </Trigger>
 
                         <Trigger Property="ColorMode" Value="ColorCanvas">
                             <Setter TargetName="_colorPaletteHost" Property="Visibility" Value="Collapsed" />
                             <Setter TargetName="_colorCanvasHost" Property="Visibility" Value="Visible" />
+                            <!--
                             <Setter TargetName="PART_ColorModeButton"
                              Property="Content"
                              Value="{Binding StandardButtonHeader, RelativeSource={RelativeSource TemplatedParent}}" />
+                            -->
                         </Trigger>
 
                         <Trigger Property="ShowDropDownButton" Value="False">
