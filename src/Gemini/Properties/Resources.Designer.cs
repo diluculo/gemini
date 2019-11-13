@@ -61,7 +61,7 @@ namespace Gemini.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to _Edit.
+        ///   Looks up a localized string similar to Failed to set value: {0}.
         /// </summary>
         internal static string AdvancedSliderCommitErrorFormat {
             get {
@@ -84,6 +84,15 @@ namespace Gemini.Properties {
         internal static string AllSupportedFiles {
             get {
                 return ResourceManager.GetString("AllSupportedFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        internal static string CancelButtonText {
+            get {
+                return ResourceManager.GetString("CancelButtonText", resourceCulture);
             }
         }
         
@@ -178,7 +187,7 @@ namespace Gemini.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to New.
+        ///   Looks up a localized string similar to _New.
         /// </summary>
         internal static string FileNewCommandText {
             get {
@@ -214,7 +223,7 @@ namespace Gemini.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Open.
+        ///   Looks up a localized string similar to _Open.
         /// </summary>
         internal static string FileOpenCommandText {
             get {
@@ -403,11 +412,38 @@ namespace Gemini.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No.
+        /// </summary>
+        internal static string NoButtonText {
+            get {
+                return ResourceManager.GetString("NoButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OK.
+        /// </summary>
+        internal static string OKButtonText {
+            get {
+                return ResourceManager.GetString("OKButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Save changes to the {0} &quot;{1}&quot; before closing?.
         /// </summary>
         internal static string SaveChangesBeforeClosingMessage {
             get {
                 return ResourceManager.GetString("SaveChangesBeforeClosingMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save changes to the following items?.
+        /// </summary>
+        internal static string SaveChangesMessage {
+            get {
+                return ResourceManager.GetString("SaveChangesMessage", resourceCulture);
             }
         }
         
@@ -588,6 +624,15 @@ namespace Gemini.Properties {
         internal static string WindowMenuText {
             get {
                 return ResourceManager.GetString("WindowMenuText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yes.
+        /// </summary>
+        internal static string YesButtonText {
+            get {
+                return ResourceManager.GetString("YesButtonText", resourceCulture);
             }
         }
     }

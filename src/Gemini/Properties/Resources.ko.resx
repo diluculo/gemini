@@ -291,4 +291,19 @@
   <data name="FileOpenFileCommandToolTip" xml:space="preserve">
     <value>파일 열기</value>
   </data>
+  <data name="CancelButtonText" xml:space="preserve">
+    <value>취소</value>
+  </data>
+  <data name="NoButtonText" xml:space="preserve">
+    <value>아니오</value>
+  </data>
+  <data name="OKButtonText" xml:space="preserve">
+    <value>확인</value>
+  </data>
+  <data name="SaveChangesMessage" xml:space="preserve">
+    <value>다음 항목의 변경 내용을 저장하시겠습니까?</value>
+  </data>
+  <data name="YesButtonText" xml:space="preserve">
+    <value>예</value>
+  </data>
 </root>

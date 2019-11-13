@@ -282,6 +282,21 @@
   <data name="ViewFullScreenCommandToolTip" xml:space="preserve">
     <value>Vollbild</value>
   </data>
+  <data name="CancelButtonText" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="NoButtonText" xml:space="preserve">
+    <value>Nein</value>
+  </data>
+  <data name="OKButtonText" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="SaveChangesMessage" xml:space="preserve">
+    <value>Sollen die Änderungen an den folgenden Elementen gespeichert werden?</value>
+  </data>
+  <data name="YesButtonText" xml:space="preserve">
+    <value>Ja</value>
+  </data>
   <data name="FileNewFileCommandText" xml:space="preserve">
     <value>Datei</value>
   </data>
