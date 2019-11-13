@@ -142,7 +142,7 @@
     <Compile Include="Framework\Results\ShowDialogResult.cs" />
     <Compile Include="Framework\Services\EditorFileType.cs" />
     <Compile Include="Framework\Services\IMainWindow.cs" />
-    <Compile Include="Modules\DialogManager\MessageBox.cs" />
+
     <Compile Include="Framework\Services\SettingsPropertyChangedEventManager.cs" />
     <Compile Include="Framework\ShaderEffects\Converters\BindingProxy.cs" />
     <Compile Include="Framework\ShaderEffects\Converters\IsNullConverter.cs" />
@@ -169,6 +169,7 @@
     <Compile Include="Framework\Controls\DynamicStyle.cs" />
     <Compile Include="Modules\DialogManager\DialogManager.cs" />
     <Compile Include="Modules\DialogManager\IDialogManager.cs" />
+    <Compile Include="Modules\DialogManager\MessageBox.cs" />
     <Compile Include="Modules\DialogManager\SaveFilesPrompt.cs" />
     <Compile Include="Modules\DialogManager\ViewModels\DialogTreeViewModel.cs" />
     <Compile Include="Modules\DialogManager\ViewModels\DialogViewModel.cs" />
