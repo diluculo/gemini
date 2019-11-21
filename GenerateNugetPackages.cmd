@@ -1,7 +1,7 @@
 @echo off
 
 set path=out
-set ver=1.0.1
+set ver=1.0.1 
 
 echo Set version = %ver%
 nuget.exe pack src\Gemini\Gemini.csproj -OutputDirectory %path% -Version %ver%
