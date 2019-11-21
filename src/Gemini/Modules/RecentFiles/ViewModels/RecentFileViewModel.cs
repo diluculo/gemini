@@ -1,6 +1,7 @@
-﻿using Caliburn.Micro;
+using Caliburn.Micro;
 using System.Collections.Specialized;
 using System.ComponentModel.Composition;
+using System.IO;
 
 namespace Gemini.Modules.RecentFiles.ViewModels
 {
@@ -30,6 +31,22 @@ namespace Gemini.Modules.RecentFiles.ViewModels
             InitializeList();
         }
 
+        public void UpdateList()
+        {
+            bool changed = false;
+            for (int i = _items.Count - 1; i >= 0; i--)
+            {
+                if (!File.Exists(_items[i].FilePath))
+                {
+                    changed = true;
+                    RemoveAt(i);
+                }
+            }
+
+            if (changed)
+                SaveList();
+        }
+
         /// <summary>
         /// Adds or moves the file to the top of the list.
         /// </summary>
@@ -39,13 +56,22 @@ namespace Gemini.Modules.RecentFiles.ViewModels
             RecentFileItemViewModel item = new RecentFileItemViewModel(filePath);
 
             int i = IndexOf(item);
-            if (i >= 0)
+
+            if (File.Exists(filePath))
             {
-                if (_items[i].Pinned) return; // do not move pinned items
+                if (i >= 0)
+                {
+                    if (_items[i].Pinned)
+                        return; // do not move pinned items
+                    RemoveAt(i);
+                }
+
+                Insert(0, item);
+            }
+            else
+            {
                 RemoveAt(i);
             }
-
-            Insert(0, item);
             SaveList();
         }
 
@@ -97,6 +123,8 @@ namespace Gemini.Modules.RecentFiles.ViewModels
             {
                 _items.Add(new RecentFileItemViewModel(filePath));
             }
+
+            UpdateList();
         }
 
         private void SaveList()

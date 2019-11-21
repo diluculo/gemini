@@ -1,4 +1,4 @@
-﻿using Caliburn.Micro;
+using Caliburn.Micro;
 using Gemini.Modules.RecentFiles.ViewModels;
 
 namespace Gemini.Modules.RecentFiles
@@ -6,6 +6,8 @@ namespace Gemini.Modules.RecentFiles
     public interface IRecentFiles
     {
         IObservableCollection<RecentFileItemViewModel> Items { get; }
+
+        void UpdateList();
 
         void Update(string filePath);
     }

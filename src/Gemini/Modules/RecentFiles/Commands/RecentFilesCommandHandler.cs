@@ -1,4 +1,4 @@
-﻿using Gemini.Framework.Commands;
+using Gemini.Framework.Commands;
 using Gemini.Framework.Services;
 using System.ComponentModel.Composition;
 using System.Threading.Tasks;
@@ -18,6 +18,7 @@ namespace Gemini.Modules.RecentFiles.Commands
 
         public override void Update(Command command)
         {
+            _shell.RecentFiles.UpdateList();
             command.Enabled = (_shell.RecentFiles.Items.Count > 0);
         }
 

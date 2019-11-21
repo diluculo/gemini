@@ -25,6 +25,8 @@ namespace Gemini.Modules.RecentFiles.Commands
 
         public void Populate(Command command, List<Command> commands)
         {
+            _shell.RecentFiles.UpdateList();
+
             for (var i = 0; i < _shell.RecentFiles.Items.Count; i++)
             {
                 var item = _shell.RecentFiles.Items[i];
@@ -55,7 +57,10 @@ namespace Gemini.Modules.RecentFiles.Commands
                 }
             }
 
-            _shell.OpenDocument(await OpenFileCommandHandler.GetEditor(newPath));
+            if (File.Exists(newPath))
+            {
+                _shell.OpenDocument(await OpenFileCommandHandler.GetEditor(newPath));
+            }
 
             // Add the file to the recent documents list
             _shell.RecentFiles.Update(newPath);
