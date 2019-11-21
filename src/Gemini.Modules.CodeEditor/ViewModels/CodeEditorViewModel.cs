@@ -65,9 +65,12 @@ namespace Gemini.Modules.CodeEditor.ViewModels
 
         protected override Task DoSave(string filePath)
         {
-            var newText = _view.TextEditor.Text;
-            File.WriteAllText(filePath, newText);
-            _originalText = newText;
+            if (_view != null)
+            {
+                var newText = _view.TextEditor.Text;
+                File.WriteAllText(filePath, newText);
+                _originalText = newText;
+            }            
             return TaskUtility.Completed;
         }
 
