@@ -15,7 +15,18 @@ namespace Gemini.Framework
 
         public bool IsNew { get; private set; }
         public string FileName { get; private set; }
-        public string FilePath { get; private set; }
+
+        private string _filePath = null;
+        public string FilePath
+        {
+            get { return _filePath; }
+            private set
+            {
+                _filePath = value;
+                NotifyOfPropertyChange(() => FilePath);
+                UpdateToolTip();
+            }
+        }
 
         public bool IsDirty
         {
@@ -108,6 +119,11 @@ namespace Gemini.Framework
         private void UpdateDisplayName()
         {
             DisplayName = (IsDirty) ? FileName + "*" : FileName;
+        }
+
+        private void UpdateToolTip()
+        {
+            ToolTip = FilePath;
         }
 
         public async Task New(string fileName)
